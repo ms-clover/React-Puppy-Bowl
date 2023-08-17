@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-    <div className="App">
+    <div id="all-players-container">
         <AllPlayers />
     </div>
 
