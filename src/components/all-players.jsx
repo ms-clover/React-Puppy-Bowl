@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+const [searchParam, setSearchParam] = useState("");
 
 export default function AllPlayers() {
 
@@ -20,8 +21,29 @@ export default function AllPlayers() {
         fetchAllPlayers();
     }, [])
 
-    // console.log("Players: ", players.data)
-
+    const playersToDisplay = searchParam ? players.filter((player) =>
+    player.name.toLowerCase().includes(searchParam/toLowerCase())
+    )
+    : players;
+    
+    return (
+        <>
+        <div>
+            <label>
+                Search 
+                <input 
+                 type="text"
+                 placeholder="search"
+                 onChange={(e) => setSearchParam(e.target.value)}
+                 />
+            </label>
+        </div>
+    
+        {playersToDisplay.map((player) => {
+            return <h2 key={player.id}>{player.name}</h2>;
+        })};
+        </>
+    )
 
 // console.log(playersToRender)
     return (
