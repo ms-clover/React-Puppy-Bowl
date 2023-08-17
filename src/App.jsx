@@ -1,5 +1,8 @@
 // import AllPlayers from './components/all-players'
 import AllPlayers from './components/all-players'
+import { Route, Routes } from "react-router-dom";
+import { NewPlayerForm} from './components/create-player-form'
+import { Nav } from './components/Nav'
 import './App.css'
 
 console.log(AllPlayers)
@@ -18,10 +21,12 @@ function App() {
 
   return (
     <>
-    <div className="App">
-        <AllPlayers />
-    </div>
+    <Nav />
+    <Routes>
+      <Route className="App" path='/' element={<AllPlayers />} />
+      <Route path='/NewPlayerForm' element={<NewPlayerForm />} />
 
+    </Routes>
 
 
     </>
