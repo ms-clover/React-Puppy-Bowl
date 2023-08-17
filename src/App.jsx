@@ -21,12 +21,7 @@ function App() {
 
   return (
     <>
-    <Nav />
-    <Routes>
-      <Route className="App" path='/' element={<AllPlayers />} />
-      <Route path='/NewPlayerForm' element={<NewPlayerForm />} />
 
-    </Routes>
 
 
     </>
