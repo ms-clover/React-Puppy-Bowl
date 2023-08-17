@@ -1,5 +1,8 @@
 // import AllPlayers from './components/all-players'
 import AllPlayers from './components/all-players'
+import { Route, Routes } from "react-router-dom";
+import { NewPlayerForm} from './components/create-player-form'
+import { Nav } from './components/Nav'
 import './App.css'
 
 console.log(AllPlayers)
@@ -18,9 +21,6 @@ function App() {
 
   return (
     <>
-    <div id="all-players-container">
-        <AllPlayers />
-    </div>
 
 
 
